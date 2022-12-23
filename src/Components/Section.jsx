@@ -58,7 +58,7 @@ const LeftButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  opacity: 0.90
+  opacity: 0.90;
   font-size: 14px;
   cursor: pointer;
   margin: 0.5rem;
