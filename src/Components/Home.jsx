@@ -59,7 +59,7 @@ function Home() {
       <Section
         model="Accessories"
         leftBtn="Shop Now"
-        rightBtn="Learn More"
+        rightBtn=""
         imgsrc="accessories.jpg"
       />
     </Container>
