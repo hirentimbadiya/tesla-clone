@@ -1,18 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Section(props) {
   return (
-    <Wrap bgImg = {props.imgsrc}>
-      <ItemText>
-        <h1 id="carname">{props.model}</h1>
-        <p id="demoDrive">{props.text}</p>
-      </ItemText>
+    <Wrap bgImg={props.imgsrc}>
+      <Fade bottom>
+        <ItemText>
+          <h1>{props.model}</h1>
+          <p>{props.text}</p>
+        </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>{props.leftBtn}</LeftButton>
-          <RightButton>{props.rightBtn}</RightButton>
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>{props.leftBtn}</LeftButton>
+            {props.rightBtn !== "" && (
+              <RightButton>{props.rightBtn}</RightButton>
+            )}
+          </ButtonGroup>
+        </Fade>
         <DownArrow src={props.arrow} />
       </Buttons>
     </Wrap>
@@ -27,7 +34,7 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: ${props => `url("/images/${props.bgImg}")`};
+  background-image: ${(props) => `url("/images/${props.bgImg}")`};
   display: flex;
   flex-direction: column; // puts content vertical
   justify-content: space-between;
@@ -37,14 +44,25 @@ const Wrap = styled.div`
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+  h1 {
+    font-family: "Alata", sans-serif;
+    font-weight: bolder;
+    font-size: 2.4rem;
+  }
+  p {
+    text-decoration: underline;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+  }
 `;
 
 const ButtonGroup = styled.div`
+  justify-content: center;
   display: flex;
   margin-bottom: 2rem;
-  @media (max-width : 768px){
-    flex-direction : column;
-    align-items:center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 const LeftButton = styled.div`
@@ -52,30 +70,31 @@ const LeftButton = styled.div`
   height: 40px;
   width: 256px;
   color: white;
-  font-family: Gotham SSm , -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-weight:550;
+  font-family: Gotham SSm, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 550;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  opacity: 0.90;
+  opacity: 0.9;
   font-size: 14px;
   cursor: pointer;
   margin: 0.5rem;
 `;
 const RightButton = styled(LeftButton)`
   background: white;
-  opacity : 0.75;
-  color : black;
-  @media (max-width : 768px){
-    margin-bottom : 0px;
+  opacity: 0.75;
+  color: black;
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
   }
 `;
 
 const DownArrow = styled.img`
   margin-top: 20px;
   height: 40px;
-  margin: 0 271px 0 255px;
+  margin: 0 283px;
   animation: animationDown infinite 1.5s;
 `;
 
