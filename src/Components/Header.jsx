@@ -29,6 +29,24 @@ function Header() {
           <CustomClose onClick={() => setMenuNavStat(false)} />
         </CloseWrapper>
         <li>
+          <a href="#">Model X</a>
+        </li>
+        <li>
+          <a href="#">Model Y</a>
+        </li>
+        <li>
+          <a href="#">Model 3</a>
+        </li>
+        <li>
+          <a href="#">Model S</a>
+        </li>
+        <li>
+          <a href="#">Solar Roof</a>
+        </li>
+        <li>
+          <a href="#">Solar Panels</a>
+        </li>
+        <li>
           <a href="#">Existing Inventory</a>
         </li>
         <li>
@@ -134,6 +152,10 @@ const MenuNav = styled.div`
   padding: 1.25rem;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.3s ease-in;
+  overflow-y:scroll;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
   li {
     padding: 0.75rem 0;
     border-bottom: 1px solid rbga(0, 0, 0, 0.2);
