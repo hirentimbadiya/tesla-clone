@@ -1,4 +1,4 @@
-import React , {useState}from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -20,7 +20,9 @@ function Header() {
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Account</a>
-        <a href="#" onClick={() => setMenuNavStat(true)}>Menu</a>
+        <a href="#" onClick={() => setMenuNavStat(true)}>
+          Menu
+        </a>
       </RightMenu>
       <MenuNav show={MenuNavStat}>
         <CloseWrapper>
@@ -28,7 +30,7 @@ function Header() {
         </CloseWrapper>
         <li>
           <a href="#">Existing Inventory</a>
-        </li> 
+        </li>
         <li>
           <a href="#">Used Inventory</a>
         </li>
@@ -130,8 +132,8 @@ const MenuNav = styled.div`
   z-index: 16;
   list-style: none;
   padding: 1.25rem;
-  transform : ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
-  transition : transform 0.3s ease-in;
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.3s ease-in;
   li {
     padding: 0.75rem 0;
     border-bottom: 1px solid rbga(0, 0, 0, 0.2);
