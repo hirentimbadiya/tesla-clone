@@ -44,7 +44,7 @@ const Wrap = styled.div`
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
-  z-index:-1;
+  z-index: -1;
   h1 {
     font-family: "Alata", sans-serif;
     font-weight: bolder;
