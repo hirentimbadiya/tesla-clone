@@ -9,20 +9,20 @@ function Home() {
   return (
     <Container>
       <Section
-        model="Model S"
-        text={text}
-        leftBtn="Buy Now"
-        rightBtn="Custom Order"
-        arrow={downArrow}
-        imgsrc="model-s.jpg"
-      />
-      <Section
         model="Model X"
         text={text}
         leftBtn="Buy Now"
         rightBtn="Custom Order"
         arrow={downArrow}
         imgsrc="model-x.jpg"
+      />
+      <Section
+        model="Model S"
+        text={text}
+        leftBtn="Buy Now"
+        rightBtn="Custom Order"
+        arrow={downArrow}
+        imgsrc="model-s.jpg"
       />
       <Section
         model="Model Y"
