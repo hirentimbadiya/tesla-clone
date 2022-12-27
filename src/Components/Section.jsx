@@ -46,9 +46,11 @@ const ItemText = styled.div`
   text-align: center;
   z-index: -1;
   h1 {
+    color:black;
     font-family: "Alata", sans-serif;
     font-weight: bolder;
     font-size: 2.4rem;
+    letter-spacing: 3px;
   }
   p {
     text-decoration: underline;
