@@ -82,11 +82,29 @@ const LeftButton = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin: 0.5rem;
+  :hover,
+  :focus,
+  :active {
+    background: black;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 `;
 const RightButton = styled(LeftButton)`
   background: white;
   opacity: 0.75;
   color: black;
+  :hover {
+    background: white;
+  }
   @media (max-width: 768px) {
     margin-bottom: 0px;
   }
