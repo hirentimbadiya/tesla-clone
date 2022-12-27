@@ -54,6 +54,9 @@ const ItemText = styled.div`
     text-decoration: underline;
     font-family: "Ubuntu", sans-serif;
     cursor: pointer;
+    :hover{
+      color:dimgray;
+    }
   }
 `;
 
@@ -114,6 +117,7 @@ const DownArrow = styled.img`
   margin-top: 20px;
   height: 40px;
   margin: 0 283px;
+  cursor:pointer;
   animation: animationDown infinite 1.5s;
 `;
 
