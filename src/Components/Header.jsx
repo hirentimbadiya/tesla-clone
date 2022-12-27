@@ -125,6 +125,25 @@ const Menu = styled.div`
     padding: 0 10px;
     flex-wrap: nowrap;
     font-family: "Montserrat", sans-serif;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition-duration: 0.5s;
+    :hover,
+    :active,
+    :focus {
+      animation-name: hvr-back-pulse;
+      animation-delay: 0.5s;
+      animation-timing-function: linear;
+      background:black;
+      opacity:0.4;
+      color: white;
+      border-radius: 10px;
+      height:30px;
+      display:flex;
+      align-items:center;
+    }
   }
   @media (max-width: 768px) {
     display: none;
@@ -132,12 +151,36 @@ const Menu = styled.div`
 `;
 
 const RightMenu = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 0px;
   a {
     font-weight: 600;
     padding: 0 10px;
     flex-wrap: nowrap;
     font-family: "Montserrat", sans-serif;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition-duration: 0.5s;
+    :hover,
+    :active,
+    :focus {
+      animation-name: hvr-back-pulse;
+      animation-delay: 0.5s;
+      animation-timing-function: linear;
+      background:black;
+      opacity:0.4;
+      color: white;
+      border-radius: 10px;
+      height:30px;
+      display:flex;
+      align-items:center;
+    }
   }
+  
 `;
 
 const MenuNav = styled.div`
@@ -145,7 +188,7 @@ const MenuNav = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.85);
   width: 18.5rem;
   z-index: 16;
   list-style: none;
