@@ -202,10 +202,31 @@ const MenuNav = styled.div`
   li {
     padding: 0.75rem 0;
     border-bottom: 1px solid rbga(0, 0, 0, 0.2);
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition-duration: 0.5s;
+    color:white ;
+    :hover,
+    :active,
+    :focus {
+      a{
+        color:white;
+      }
+      animation-name: hvr-back-pulse;
+      animation-delay: 0.5s;
+      animation-timing-function: linear;
+      background-color:rgba(0, 0, 0, 0.6);
+      opacity:0.9;
+      border-radius: 10px;
+      color:white;
+    }
     a {
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
     }
+    
   }
 `;
 
