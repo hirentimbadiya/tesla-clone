@@ -152,7 +152,7 @@ const MenuNav = styled.div`
   padding: 1.25rem;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.3s ease-in;
-  overflow-y:scroll;
+  overflow-y: scroll;
   ::-webkit-scrollbar {
     width: 0px;
   }
