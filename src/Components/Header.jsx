@@ -200,6 +200,7 @@ const MenuNav = styled.div`
     width: 0px;
   }
   li {
+    cursor:pointer;
     padding: 0.75rem 0;
     border-bottom: 1px solid rbga(0, 0, 0, 0.2);
     vertical-align: middle;
