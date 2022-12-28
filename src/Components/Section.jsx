@@ -51,6 +51,7 @@ const ItemText = styled.div`
     font-weight: bolder;
     font-size: 2.4rem;
     letter-spacing: 3px;
+    line-height:1.8;
   }
   p {
     text-decoration: underline;
