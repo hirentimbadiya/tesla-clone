@@ -6,16 +6,16 @@ function Header() {
   const [MenuNavStat, setMenuNavStat] = useState(false);
   return (
     <Container>
-      <a href="#">
+      <a href="/">
         <img src="images/logo.svg" alt="" />
       </a>
       <Menu>
-        <a href="#">Model S</a>
-        <a href="#">Model 3</a>
-        <a href="#">Model X</a>
-        <a href="#">Model Y</a>
-        <a href="#">Solar Roof</a>
-        <a href="#">Solar Panels</a>
+        <a href="#modelS">Model S</a>
+        <a href="#model3">Model 3</a>
+        <a href="#modelX">Model X</a>
+        <a href="#modelY">Model Y</a>
+        <a href="#solarRoof">Solar Roof</a>
+        <a href="#solarPanel">Solar Panels</a>
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
@@ -24,27 +24,32 @@ function Header() {
           Menu
         </a>
       </RightMenu>
+      <RightMenuSmall>
+        <a href="#" onClick={() => setMenuNavStat(true)}>
+          Menu
+        </a>
+      </RightMenuSmall>
       <MenuNav show={MenuNavStat}>
         <CloseWrapper>
           <CustomClose onClick={() => setMenuNavStat(false)} />
         </CloseWrapper>
         <li>
-          <a href="#">Model X</a>
+          <a href="#modelX">Model X</a>
         </li>
         <li>
-          <a href="#">Model Y</a>
+          <a href="#modelY">Model Y</a>
         </li>
         <li>
-          <a href="#">Model 3</a>
+          <a href="#model3">Model 3</a>
         </li>
         <li>
-          <a href="#">Model S</a>
+          <a href="#modelS">Model S</a>
         </li>
         <li>
-          <a href="#">Solar Roof</a>
+          <a href="#solarRoof">Solar Roof</a>
         </li>
         <li>
-          <a href="#">Solar Panels</a>
+          <a href="#solarPanels">Solar Panels</a>
         </li>
         <li>
           <a href="#">Existing Inventory</a>
@@ -129,32 +134,29 @@ const Menu = styled.div`
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     overflow: hidden;
-    transition-duration: 0.5s;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     :hover,
     :active,
     :focus {
-      animation-name: hvr-back-pulse;
-      animation-delay: 0.5s;
-      animation-timing-function: linear;
-      background:black;
-      opacity:0.4;
+      background: black;
+      opacity: 0.4;
       color: white;
-      border-radius: 10px;
-      height:30px;
-      display:flex;
-      align-items:center;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
 
 const RightMenu = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-padding-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
   a {
     font-weight: 600;
     padding: 0 10px;
@@ -164,24 +166,55 @@ padding-top: 0px;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     overflow: hidden;
-    transition-duration: 0.5s;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     :hover,
     :active,
     :focus {
-      animation-name: hvr-back-pulse;
-      animation-delay: 0.5s;
-      animation-timing-function: linear;
-      background:black;
-      opacity:0.4;
+      background: black;
+      opacity: 0.4;
       color: white;
-      border-radius: 10px;
-      height:30px;
-      display:flex;
-      align-items:center;
     }
   }
-  
+  @media(max-width: 768px) {
+    display: none;
+  }
 `;
+const RightMenuSmall = styled.div` 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+
+  a {
+    font-weight: 600;
+    padding: 0 10px;
+    flex-wrap: nowrap;
+    font-family: "Montserrat", sans-serif;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    :hover,
+    :active,
+    :focus {
+      background: black;
+      opacity: 0.4;
+      color: white;
+    }
+  }
+  @media(min-width: 768px) {
+    display: none;
+  }
+ `
 
 const MenuNav = styled.div`
   position: fixed;
@@ -200,34 +233,27 @@ const MenuNav = styled.div`
     width: 0px;
   }
   li {
-    cursor:pointer;
+    cursor: pointer;
     padding: 0.75rem 0;
     border-bottom: 1px solid rbga(0, 0, 0, 0.2);
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     overflow: hidden;
-    transition-duration: 0.5s;
-    color:white ;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    border-radius: 10px;
     :hover,
     :active,
     :focus {
-      a{
-        color:white;
+      a {
+        color: white;
       }
-      animation-name: hvr-back-pulse;
-      animation-delay: 0.5s;
-      animation-timing-function: linear;
-      background-color:rgba(0, 0, 0, 0.6);
-      opacity:0.9;
-      border-radius: 10px;
-      color:white;
+      background-color: rgba(0, 0, 0, 0.6);
     }
     a {
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
     }
-    
   }
 `;
 
