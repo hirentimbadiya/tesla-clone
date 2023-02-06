@@ -19,6 +19,10 @@ a {
   box-sizing: border-box;
 }
 
+.App{
+  overflow-x: hidden;
+}
+
 @keyframes animationDown {
   0%,
   20%,
