@@ -16,6 +16,7 @@ function Home() {
   return (
     <Container>
       <Section
+        id="modelX"
         model="Model X"
         text={text[0]}
         leftBtn={leftBtnTxt[0]}
@@ -24,6 +25,7 @@ function Home() {
         imgsrc="model-x.jpg"
       />
       <Section
+        id="modelS"
         model="Model S"
         text={text[0]}
         leftBtn={leftBtnTxt[0]}
@@ -32,6 +34,7 @@ function Home() {
         imgsrc="model-s.jpg"
       />
       <Section
+        id="modelY"
         model="Model Y"
         text={text[0]}
         leftBtn={leftBtnTxt[0]}
@@ -40,6 +43,7 @@ function Home() {
         imgsrc="model-y.jpg"
       />
       <Section
+        id="model3"
         model="Model 3"
         text={text[0]}
         leftBtn={leftBtnTxt[0]}
@@ -48,6 +52,7 @@ function Home() {
         imgsrc="model-3.jpg"
       />
       <Section
+        id="solarRoof"
         model="Solar Panels"
         text={text[1]}
         leftBtn={leftBtnTxt[1]}
@@ -56,6 +61,7 @@ function Home() {
         imgsrc="solar-panel.jpg"
       />
       <Section
+        id="solarPanel"
         model="Solar Roof"
         text={text[2]}
         leftBtn={leftBtnTxt[1]}
